@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <title>Group Chat</title>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+          <h1>Group Chat APP</h1>
+        </div>
+         <div class="side-section">
+          <div>
+           
+            <button id="public" onclick="switchGroup(1,'Common Room')">Common Room</button>
+          </div>
+    <h2>Your Groups</h2>
+    <ul class="group-list" id="group-list">
+
+    </ul>
+    <button class="create-group-btn" onclick="createGroup()">Create Group</button>
+
+    <div class="search">
+      <h2>Add User</h2>
+      <form onsubmit="addUserClicked(event)">
+        <input type="text" placeholder="User Email" id="search">
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <div id="user-container">
+      <h2>Users</h2>
+      <ul class="user-list" id="userlist">
+        <!-- <ul class="user-list li">
+          <span>User 1</span>
+          <button>Make Admin</button>
+          <button>X</button>
+        </ul>
+        <ul class="user-list li">
+          <span>User 2</span>
+          <button>Make Admin</button>
+          <button>X</button>
+        </ul>
+        <ul class="user-list li">
+          <span>User 3</span>
+          <button>Make Admin</button>
+          <button>X</button>
+        </ul> -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="chat-headers">
+    <h3 id="gorupNameHeader">Common Room</h3>
+  </div>
+        <div class="chat-messages" id="chatblock"> 
+        </div>
+        <div class="chat-input">
+          <textarea placeholder="Type your message here..." id="textArea"></textarea>
+          <button onclick="chatButton(event)">Send</button>
+          <!-- <button onclick="getAll()">All Messages</button> -->
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.5/axios.min.js" integrity="sha512-JEXkqJItqNp0+qvX53ETuwTLoz/r1Tn5yTRnZWWz0ghMKM2WFCEYLdQnsdcYnryMNANMAnxNcBa/dN7wQtESdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+      <script src="chat.js"></script>
+  </body>
+  
+</html>
